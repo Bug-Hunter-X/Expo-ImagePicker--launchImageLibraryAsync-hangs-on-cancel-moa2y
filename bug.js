@@ -1,0 +1,1 @@
+This bug occurs when using the Expo ImagePicker library.  The issue is that when the user cancels the image selection process, the promise returned by `launchImageLibraryAsync` never rejects.  Instead, it just hangs, leading to a deadlock in the application. This is particularly problematic because standard error handling mechanisms expecting a rejection are ineffective.
